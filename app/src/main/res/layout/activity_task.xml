@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.task.TaskActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_dueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Due date: "
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/textView_dueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="There are no notes for this task"
+            android:textColor="@color/teal_200"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_notesHeader" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textview_notesHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notes:"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_dueDate"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/textview_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="There are no notes for this task"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_notesHeader" />
+
+    <LinearLayout
+        android:id="@+id/layout_subtaskHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_notes">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8.8"
+            android:layout_gravity="center_vertical"
+            android:text="Subtasks"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/button_addSubtask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.2"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:background="@drawable/roundcorner"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycleview_subtasks" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textview_subtaskHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This task has no subtasks"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_subtaskHeader"
+        android:layout_margin="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_subtaskHeader">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleview_subtasks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

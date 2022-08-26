@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.addEditTask.AddEditTask">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/flbtn_saveTask"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="4dp"
+                android:paddingBottom="4dp"
+                android:text="Task Title"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edittext_setTaskTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@color/textBg"
+                android:hint="Title"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint" />
+
+            <LinearLayout
+                android:id="@+id/layout_pickStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/ic_start_date"
+                    android:backgroundTint="?attr/colorAccent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/textView_startDateHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingBottom="4dp"
+                        android:text="Set start date:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_startDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?attr/colorAccent"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_pickDueDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/ic_duedate"
+                    android:backgroundTint="?attr/colorAccent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/textView_dueDateHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingBottom="4dp"
+                        android:text="Set due date:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_dueDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?attr/colorAccent"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="4dp"
+                android:paddingBottom="4dp"
+                android:text="Pick background color:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton_pickbackgroundRed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/palette_red_selected"
+                    android:clickable="true"
+                    android:padding="10dp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton_pickbackgroundGreen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/palette_green_unselected"
+                    android:clickable="true"
+                    android:padding="10dp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton_pickbackgroundBlue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/palette_blue_unselected"
+                    android:clickable="true"
+                    android:padding="10dp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton_pickbackgroundYellow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/palette_yellow_unselected"
+                    android:clickable="true"
+                    android:padding="10dp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton_pickbackgroundOrange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/palette_orange_unselected"
+                    android:clickable="true"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_taskNotesHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+                android:paddingBottom="4dp"
+                android:text="Task notes:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layout_taskNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@color/textBg"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edittext_setTaskNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Notes"
+                    android:inputType="textMultiLine"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/textView_taskStatusHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="Task status:"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner_setTaskStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp" />
+
+            </LinearLayout>
+
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/flbtn_saveTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_save"
+                app:backgroundTint="?attr/colorAccent"
+                app:layout_anchorGravity="bottom|end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

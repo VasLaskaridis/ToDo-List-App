@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="appbox.room.vasili.simpletodolist.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@id/navigation_calendar" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_folders"
+            app:destination="@id/navigation_folders" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_calendar"
+        android:name="appbox.room.vasili.simpletodolist.ui.calendar.CalendarFragment"
+        android:label="@string/title_calendar"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_navigation_calendar_to_navigation_folders"
+            app:destination="@id/navigation_folders" />
+        <action
+            android:id="@+id/action_navigation_calendar_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_calendar_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_folders"
+        android:name="appbox.room.vasili.simpletodolist.ui.orderByState.TasksByStateFragment"
+        android:label="@string/title_folders"
+        tools:layout="@layout/fragment_status" >
+        <action
+            android:id="@+id/action_navigation_folders_to_navigation_calendar"
+            app:destination="@id/navigation_calendar" />
+        <action
+            android:id="@+id/action_navigation_folders_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_folders_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="appbox.room.vasili.simpletodolist.ui.settings.SettingsFragment"
+        android:label="Settings" >
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_calendar"
+            app:destination="@id/navigation_calendar" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_folders"
+            app:destination="@id/navigation_folders" />
+    </fragment>
+
+</navigation>
