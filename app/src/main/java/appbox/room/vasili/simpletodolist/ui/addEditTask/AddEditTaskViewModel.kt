@@ -57,7 +57,7 @@ class AddEditTaskViewModel(val taskRepository: TaskRepository) : ViewModel(), Ad
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
-        
+
     }
 }
 
