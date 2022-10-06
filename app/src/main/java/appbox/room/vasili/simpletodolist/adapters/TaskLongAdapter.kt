@@ -1,7 +1,7 @@
 package appbox.room.vasili.simpletodolist.adapters
 
 import android.content.Context
-import android.util.Log
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,12 +50,10 @@ class TaskLongAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         var textHolder=""
 
         if(currentTask.taskStartDate!=null){
-            Log.e("test ","1")
             formattedDateStart = sdf.format(currentTask.taskStartDate)
             textHolder="Start date: $formattedDateStart"
         }
         if(currentTask.taskDueDate!=null){
-            Log.e("test ","2")
             formattedDateEnd = sdf.format(currentTask.taskDueDate)
             if(textHolder.equals("")){
                 textHolder="Due date: $formattedDateEnd"

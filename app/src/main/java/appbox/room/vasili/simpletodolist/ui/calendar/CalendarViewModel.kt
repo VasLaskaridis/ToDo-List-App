@@ -1,10 +1,9 @@
 package appbox.room.vasili.simpletodolist.ui.calendar
 
-import android.util.Log
+
 import androidx.lifecycle.*
 import appbox.room.vasili.simpletodolist.models.task.Task
 import appbox.room.vasili.simpletodolist.models.task.TaskRepository
-import appbox.room.vasili.simpletodolist.ui.home.HomeViewModel
 import java.text.SimpleDateFormat
 import java.util.*
 

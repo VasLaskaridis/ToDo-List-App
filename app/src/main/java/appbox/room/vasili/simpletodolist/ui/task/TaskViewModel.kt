@@ -1,13 +1,13 @@
  package appbox.room.vasili.simpletodolist.ui.task
 
-import android.util.Log
+
 import androidx.lifecycle.*
 import appbox.room.vasili.simpletodolist.models.subtask.Subtask
 import appbox.room.vasili.simpletodolist.models.subtask.SubtaskRepository
 import appbox.room.vasili.simpletodolist.models.task.Task
 import appbox.room.vasili.simpletodolist.models.task.TaskRepository
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.newSingleThreadContext
+
 
  class TaskViewModel(val taskRepository: TaskRepository, val subtaskRepository: SubtaskRepository) : ViewModel() {
 

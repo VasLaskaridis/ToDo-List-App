@@ -1,24 +1,17 @@
 package appbox.room.vasili.simpletodolist.ui.addEditTask
 
 import android.app.DatePickerDialog
-import android.content.DialogInterface
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.DatePicker
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import appbox.room.vasili.simpletodolist.R
 import appbox.room.vasili.simpletodolist.SimpleToDoListApplication
 import appbox.room.vasili.simpletodolist.databinding.ActivityAddEditTaskBinding
 import appbox.room.vasili.simpletodolist.models.task.Task
-import appbox.room.vasili.simpletodolist.ui.task.TaskActivity
 import java.text.SimpleDateFormat
 import java.util.*
 

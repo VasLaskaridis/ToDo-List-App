@@ -14,7 +14,6 @@ import appbox.room.vasili.simpletodolist.R
 import appbox.room.vasili.simpletodolist.SimpleToDoListApplication
 import appbox.room.vasili.simpletodolist.adapters.TaskLongAdapter
 import appbox.room.vasili.simpletodolist.databinding.FragmentCompletedBinding
-import appbox.room.vasili.simpletodolist.databinding.FragmentHomeBinding
 import appbox.room.vasili.simpletodolist.models.task.Task
 import appbox.room.vasili.simpletodolist.ui.task.TaskActivity
 

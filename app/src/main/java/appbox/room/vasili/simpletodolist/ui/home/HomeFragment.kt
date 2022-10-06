@@ -9,13 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import appbox.room.vasili.simpletodo.TaskAdapter
 import appbox.room.vasili.simpletodolist.SimpleToDoListApplication
 import appbox.room.vasili.simpletodolist.adapters.TaskLongAdapter
 import appbox.room.vasili.simpletodolist.databinding.FragmentHomeBinding
 import appbox.room.vasili.simpletodolist.models.task.Task
-import appbox.room.vasili.simpletodolist.ui.addEditTask.AddEditTask
 import appbox.room.vasili.simpletodolist.ui.task.TaskActivity
 
 class HomeFragment : Fragment() {

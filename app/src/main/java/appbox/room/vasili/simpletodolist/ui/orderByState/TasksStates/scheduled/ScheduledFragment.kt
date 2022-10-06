@@ -13,8 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import appbox.room.vasili.simpletodolist.R
 import appbox.room.vasili.simpletodolist.SimpleToDoListApplication
 import appbox.room.vasili.simpletodolist.adapters.TaskLongAdapter
-import appbox.room.vasili.simpletodolist.databinding.FragmentOngoingBinding
-import appbox.room.vasili.simpletodolist.databinding.FragmentPendingBinding
 import appbox.room.vasili.simpletodolist.databinding.FragmentScheduledBinding
 import appbox.room.vasili.simpletodolist.models.task.Task
 import appbox.room.vasili.simpletodolist.ui.task.TaskActivity

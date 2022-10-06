@@ -1,11 +1,9 @@
 package appbox.room.vasili.simpletodolist.models.subtask
 
-import android.os.Parcel
-import android.os.Parcelable
-import android.os.Parcelable.Creator
+
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
+
 
 @Entity(tableName = "subtask_table")
 class Subtask {
