@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import appbox.room.vasili.simpletodo.TaskAdapter
 import appbox.room.vasili.simpletodolist.SimpleToDoListApplication
 import appbox.room.vasili.simpletodolist.adapters.TaskLongAdapter
 import appbox.room.vasili.simpletodolist.databinding.FragmentHomeBinding
@@ -33,26 +32,6 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val layoutManager_newTasks = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        _binding!!.recycleviewNewTasks.setLayoutManager(layoutManager_newTasks)
-        _binding!!.recycleviewNewTasks.setHasFixedSize(true)
-        val newTasksAdapter= TaskAdapter()
-        newTasksAdapter.setTaskClickListener(object:TaskAdapter.onTaskClickListener{
-            override fun onTaskClick(task: Task, position: Int) {
-                val intent: Intent = Intent( activity, TaskActivity::class.java)
-                intent.putExtra("task", task)
-                 startActivity(intent)
-            }
-        })
-        _binding!!.recycleviewNewTasks.adapter=newTasksAdapter
-        homeViewModel.getAllTasksForToday().observe(viewLifecycleOwner, object : Observer<List<Task>> {
-            override fun onChanged(taskList: List<Task>) {
-                newTasksAdapter.setListOfTasks(taskList)
-                if(taskList.size==0){ binding.textviewNoNewTasks.visibility=View.VISIBLE}
-                else{ binding.textviewNoNewTasks.visibility=View.GONE}
-            }
-        })
 
         val layoutManager_ongoingTasks = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         _binding!!.recyclerviewOngoingTasks.setLayoutManager(layoutManager_ongoingTasks)

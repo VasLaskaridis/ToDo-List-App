@@ -9,11 +9,6 @@ class HomeViewModel(val taskRepository: TaskRepository) : ViewModel() {
 
     private lateinit var taskList: LiveData<List<Task>>
 
-    fun getAllTasksForToday(): LiveData<List<Task>> {
-        taskList=taskRepository.getAllTasksForToday().asLiveData()
-        return taskList
-    }
-
     fun getActiveTasks(): LiveData<List<Task>> {
         taskList=taskRepository.getActiveTasks().asLiveData()
         return taskList
